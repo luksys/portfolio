@@ -116,7 +116,9 @@ gulp.task( 'browser-sync', function() {
     // @link http://www.browsersync.io/docs/options/
 
     // Project URL.
-    proxy: projectURL,
+     server: {
+            baseDir: "./"
+        },
 
     // `true` Automatically open the browser with BrowserSync live server.
     // `false` Stop the browser from automatically opening.
@@ -127,7 +129,7 @@ gulp.task( 'browser-sync', function() {
     injectChanges: true,
 
     // Use a specific port (instead of the one auto-detected by Browsersync).
-    // port: 7000,
+    port: 7000,
 
   } );
 });
