@@ -301,6 +301,10 @@ body {
     margin:0 auto;
     overflow: hidden;
     @extend %clear;
+
+    &.c-2 {
+        max-width: 1600px;
+    }
 }
 
 .no-scroll {

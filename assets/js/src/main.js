@@ -19,6 +19,8 @@ jQuery( document ).ready(function($) {
 		$('.main-nav .menu').toggleClass('is-active');
 	});
 
+	$('.intro-skills').addClass('animated fadeInUp');
+
 });
 
 

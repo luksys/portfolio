@@ -74,6 +74,12 @@ img {
 	// }
 }
 
+.background-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 // .icon {
 // 	@include font-icon();
 
@@ -108,3 +114,14 @@ img {
 // 	50% { opacity:0; }
 // 	100% { opacity:1; }
 // }
+
+.social-media {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+
+	.social-media-item {
+		display: inline-block;
+    	margin: 0 10px;
+	}
+}
