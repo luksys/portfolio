@@ -2,15 +2,16 @@
   "name": "cotd",
   "version": "0.0.1",
   "private": true,
-  "homepage": "/react/",
   "devDependencies": {
     "autoprefixer-stylus": "0.10.0",
     "babel-eslint": "^7.1.1",
+    "classnames": "^2.2.5",
     "concurrently": "3.0.0",
     "eslint": "^3.12.2",
     "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
+    "node-sass": "^4.5.2",
     "react-scripts": "0.6.1",
     "stylus": "0.54.5"
   },
@@ -24,11 +25,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
+    "watch": "concurrently --names \"webpack\" --prefix name \"npm run start\" \"npm run dev:watch\"",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
-    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+    "autoprefixer": "postcss -u autoprefixer -r src/css/*.css",
+    "scss": "node-sass --output-style compressed -w src/sass/layout.scss src/css/layout.css",
+    "dev:watch": "npm run scss && npm run autoprefixer"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/.eslintrc"

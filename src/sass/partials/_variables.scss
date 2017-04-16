@@ -1,0 +1,31 @@
+$font-family-base: 		sans-serif;
+$icon-family-base: 		"font_awesome";
+$fa-font-path:        "../fonts" !default;
+
+$font-size-base: 		16px;
+$font-size-alt:			14px;
+$line-height-base: 		1.4;
+
+$brand-color-dark:		#000;
+$brand-color:			#BD9B63;
+
+$text-color: 			$brand-color-dark;
+$link-color: 			$brand-color-dark;
+
+$headings-font-family:  'caviar_dreams',sans-serif;
+$headings-font-weight:  300;
+$headings-line-height:  1.3;
+$headings-color: 		$text-color;
+
+$brand-color-light: 	lighten($text-color, 50%);
+
+
+$mobile: 				320px;
+$mobile-large:			600px;
+$tablet: 				768px;
+
+$small-desktop:			1024px;
+$desktop: 				1280px;
+$desktop-large: 		1350px;
+
+$viewport-increment: 	1px;

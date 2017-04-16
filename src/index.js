@@ -1,20 +1,22 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter, Match } from 'react-router';
 
-import './css/style.css';
+import './css/layout.css';
 
-import App from './components/App';
-import NotFound from './components/NotFound';
-import StorePicker from './components/StorePicker';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const Root = () => {
 	return (
-		<BrowserRouter basename="/react">
+		<BrowserRouter>
 			<div>
-				<Match exactly pattern="/" component={StorePicker} />
-				<Match pattern="/store/:storeId" component={App}/>
-				<Miss component={NotFound}/>
+				<Header />
+					<Match exactly pattern="/" component={Home} />
+					<Match exactly pattern="/contact" component={Contact} />
+				<Footer />
 			</div>
 		</BrowserRouter>
 	)
