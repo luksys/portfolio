@@ -11,20 +11,32 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4 {
 }
 
 h1,.h1 {
-	font-size: 36px;
+	font-size: 65px;
     margin: 15px 0;
 	line-height: 1.1;
 	font-weight: 200;
+
+	@include until($tablet){
+		font-size: 30px;
+	}
 }
 
 h2,.h2 {
 	font-size: 25px;
 	margin: 0 0 15px 0;
+
+	@include until($tablet){
+		font-size: 20px;
+	}
 }
 
 h3,.h3 {
 	font-size: 21px;
 	margin: 0 0 15px 0;
+
+	@include until($tablet){
+		font-size: 18px;
+	}
 }
 
 h4,.h4 {

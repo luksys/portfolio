@@ -2,17 +2,19 @@ import React from 'react';
 
 class Intro extends React.Component {
 	render(){
-		const imgUrl = require('../images/coding.jpg');
-        const styles =  { backgroundImage: 'url('+imgUrl+')' };
+        const styles =  { backgroundImage: 'url(http://www.e-luksys.com/images/black-and-white-man-person-hands.jpg)' };
         
 		return (
  			<section className="intro" style={styles}>
 
                 <div className="intro-content">
-                    <div className="me">Evaldas Luksys</div>
-                    <div className="intro-skills">
-                        <p>I am full stack <span>Web Developer</span></p>
-                    </div>
+                    <h1 className="section-title">
+                        <span className="me">Evaldas Luksys</span>
+                        <span className="intro-skills">
+                            <p>I am full stack Web Developer</p>
+                        </span>
+                    </h1>
+                   
                 </div>
 
                 <a className="ca3-scroll-down-link ca3-scroll-down-arrow"></a>

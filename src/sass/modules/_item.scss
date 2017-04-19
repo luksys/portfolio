@@ -1,6 +1,10 @@
 .item {
 	padding: 40px 20px;
 
+	@include until($tablet){
+		padding: 30px 20px;
+	}
+
 	.item-title {
 		color: inherit;
 	}
@@ -14,17 +18,16 @@
 	&.portfolio {
 		position: relative;
 		padding-bottom: 60%;
+		backface-visibility: hidden;
 
-		&:before {
-			content: '';
-		    position: absolute;
-		    top: 0;
-		    bottom: 0;
-		    left: 0;
-		    right: 0;
-		    background: rgba(0,0,0,0.4);
-		    z-index: 1;
+		@include at-least($tablet){
+			margin: 0 20px;
 		}
+
+		@include until($tablet){
+			margin-bottom: 120px;
+		}
+
 		.overlay-image {
 			position: absolute;
 			top:0;
@@ -32,13 +35,22 @@
 			left:0;
 			right:0;
 		}
-		.content {
+		.portfolio-content {
 			position: absolute;
-			bottom: 0;
-			left: 0;
-			z-index: 2;
-    		text-align: left;
-    		padding: 20px 20px 0px 20px;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    z-index: 10;
+		    background: rgba(204,51,65,0.85);
+
+		    @include until($tablet){
+				bottom: initial;
+				top: 100%;
+			}
+		}
+		.content {
+    		padding: 20px 85px 0px 20px;
+			text-align: left;
 		}
 		.item-title {
 			font-size: 18px;
@@ -46,10 +58,12 @@
 		    margin-bottom: 2px;
 		}
 		.description {
-			opacity: 0;
-			transform: translateY(15px);
-			transition: all 0.15s ease-in-out;
 			font-size: 12px;
+			@include at-least($tablet){
+				opacity: 0;
+				transform: translateY(15px);
+				transition: all 0.15s ease-in-out;
+			}
 		}
 		.visit-link {
 			position: absolute;
@@ -65,8 +79,10 @@
 		}
 		&:hover {
 			.description {
-				opacity: 1;
-				transform: translateY(0);
+				@include at-least($tablet){
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 		}
 		&.clear-styles {

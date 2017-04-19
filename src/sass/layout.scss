@@ -252,7 +252,7 @@ textarea {
 
 @import 'vendor/frow';
 @import 'vendor/animate';
-@import 'vendor/flickity';
+// @import 'vendor/flickity';
 @import 'vendor/font-awesome/font-awesome.scss';
 
 @import 'modules/hamburger';
@@ -279,6 +279,10 @@ body {
     margin:0;
     height: 100%;
     min-height: 100%;
+
+    @include until($tablet){
+        font-size: 15px;
+    }
 }
 
 .wrapper {

@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     color: #fff;
-    background: rgba(204,51,65,0.85);
+    // background: rgba(204,51,65,0.85);
 
     a {
         color: inherit;
@@ -13,13 +13,19 @@
     }
 
     .mastheader-top {
-        padding: 2px 20px;
-        background: #000;
+        padding: 10px 20px;
+        background: rgba(0,0,0,0.8);
         color: #fff;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+
+        .HeaderTop-contact {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
 
         .icon {
             font-size: 22px;
@@ -38,7 +44,7 @@
         }
 
         .social-media-item {
-            margin: 0 5px;
+            margin: 0 7px;
         }
     }
 

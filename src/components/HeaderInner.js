@@ -39,14 +39,10 @@ class HeaderInner extends React.Component {
 
 		return (
 		    <div className="mastheader-inner">
-                <Link to="/" className="logo"><img src={require('../images/logo.svg')} alt=""/></Link>
               	{hamburger}
                 <nav className="main-nav">
                     <ul className={navClasses}>
                         <li className="menu-item"><Link activeOnlyWhenExact={true} activeClassName="active" to="/">Home</Link></li>
-                        <li className="menu-item"><Link activeClassName="active" to="/contact">Contact</Link></li>
-                        <li className="menu-item"><Link activeClassName="active" to="#">About</Link></li>
-                        <li className="menu-item"><Link activeClassName="active" to="#">Portfolio</Link></li>
                     </ul>
                 </nav>
             </div>

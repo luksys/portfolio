@@ -9,7 +9,7 @@ class Header extends React.Component {
 		return (
 			<header className="mastheader" id="mastheader">
 				<HeaderTop />
-				<HeaderInner />
+				{ /*<HeaderInner /> */}
         	</header>
 		)
 	}
